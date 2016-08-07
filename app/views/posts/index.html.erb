@@ -2,10 +2,15 @@
 
 <div class='container'>
   <div class='row'>
-    <div class=' nll-btns ix columns offset-by-three'>
-      <button><%= link_to 'New Post', new_post_path %></button>
-      <button><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></button>
-      <button><%= link_to 'Log In', user_session_path %></button>
+    <div class=' nll-btns six columns offset-by-four'>
+      <% if user_signed_in? %>
+        <button><%= link_to 'New Post', new_post_path %></button>
+        <button><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></button>
+      <% else %>
+      <div class='six columns offset-by-two'>
+        <button><%= link_to 'Login', user_session_path %></button>
+      </div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -21,11 +26,19 @@
 </div>
 <div class='container'>
   <div class='posts-content'>
+    <% if user_signed_in? %>
     <p class= 'six columns offset-by-two'><%= post.content %></p>
+    <% else %>
+    <p class= 'ten columns offset-by-two'><%= post.content %></p>
+    <% end %>
   </div>
   <div class='crud-btns two columns'>
+    <% if user_signed_in? %>
     <button><%= link_to 'Edit', edit_post_path(post)%></button>
     <button><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+    <% else %>
+
+    <% end %>
   </div>
 </div>
 

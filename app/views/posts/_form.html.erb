@@ -18,10 +18,11 @@
 
   <div class="field">
     <%= f.label :content %>
-    <%= f.text_area :content %>
+    <%= f.cktext_area :content%>
   </div>
 
   <div class="actions">
     <%= f.submit %>
+    <button class='post-back-btn'><%= link_to 'Back', posts_path %></button>
   </div>
 <% end %>
