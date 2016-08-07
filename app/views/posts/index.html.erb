@@ -1,27 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-  <% @posts.each do |post| %>
-<div class='posts-container'>
-  <div class='container'>
-    <div class='posts-title'>
-      <h3 class= 'six columns'><%= post.title %></h3>
-    </div>
-  </div>
-  <div class='container'>
-    <div class='posts-content'>
-      <p class= 'six columns'><%= post.content %></p>
-    </div>
-    <div class='two columns'>
-      <button><%= link_to 'Show', post%></button>
-      <button><%= link_to 'Edit', edit_post_path(post)%></button>
-      <button><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+<div class='container'>
+  <div class='row'>
+    <div class=' nll-btns ix columns offset-by-three'>
+      <button><%= link_to 'New Post', new_post_path %></button>
+      <button><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></button>
+      <button><%= link_to 'Log In', user_session_path %></button>
     </div>
   </div>
 </div>
-<% end %>
+
+  <% @posts.each do |post| %>
 
 <div class='container'>
-  <button><%= link_to 'New Post', new_post_path. :class => 'text-align c'%></button>
-  <button><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></button>
-  <button><%= link_to 'Log In', user_session_path %></button>
-</div
+  <div class='row'>
+    <div class='posts-title'>
+      <h3 class= 'six columns offset-by-two'><span class='slashes'>// </span><%= link_to post.title, post%></h3>
+    </div>
+  </div>
+</div>
+<div class='container'>
+  <div class='posts-content'>
+    <p class= 'six columns offset-by-two'><%= post.content %></p>
+  </div>
+  <div class='crud-btns two columns'>
+    <button><%= link_to 'Edit', edit_post_path(post)%></button>
+    <button><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+  </div>
+</div>
+
+<% end %>
