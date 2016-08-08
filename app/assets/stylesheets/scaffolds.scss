@@ -1,36 +1,40 @@
 body {
   background-color: #fff;
   color: black !important;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
   margin: 33px;
   font-weight: 300;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  background-color: #fff;
+  color: #555 !important;
+  font-size: 14px;
   line-height: 18px;
   margin: 33px;
+  font-weight: 300;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 pre {
   background-color: #eee;
   padding: 10px;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 a {
-  color: black !important;
+  color: #555 !important;
   text-decoration: none !important;
   &:visited {
-    color: black !important;
+    color: #555 !important;
     text-decoration: none !important;
   }
 
   &:hover {
-    color: black !important;
+    color: #555 !important;
     text-decoration: none !important;
   }
 }
@@ -78,6 +82,9 @@ div {
     margin-bottom: 0;
     background-color: #c00;
     color: #fff;
+  }
+  h4 {
+    text-transform: lowercase !important;
   }
 
   ul li {
