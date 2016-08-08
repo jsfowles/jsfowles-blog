@@ -19,8 +19,8 @@
     <div class='crud-btns two columns'>
         <% if user_signed_in? %>
         <button><%= link_to 'Edit', edit_post_path(@post) %></button>
-        <button><%= link_to 'Back', posts_path %></button>
         <button><%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+        <button><%= link_to 'Back', posts_path %></button>
 
 
         <% else %>

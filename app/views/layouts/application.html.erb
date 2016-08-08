@@ -13,13 +13,14 @@
       <div class='row'>
         <div class=' nll-btns six columns offset-by-four'>
           <% if user_signed_in? %>
-            <button><%= link_to 'New Post', new_post_path %></button>
-            <button><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></button>
+          <button><%= link_to 'New Post', new_post_path %></button>
+          <button><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></button>
           <% else %>
-          <div class='six columns offset-by-two'>
-            <button><%= link_to 'Login', user_session_path %></button>
-          </div>
+        <div class='nll-btns eight columns'>
+          <button><%= link_to 'Login', user_session_path %></button>
+          <button><%= link_to 'Sign Up', new_user_registration_path %></button>
           <% end %>
+        </div>
         </div>
       </div>
     </div>
