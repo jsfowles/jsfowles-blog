@@ -9,6 +9,20 @@
   </head>
 
   <body>
+    <div class='container'>
+      <div class='row'>
+        <div class=' nll-btns six columns offset-by-four'>
+          <% if user_signed_in? %>
+            <button><%= link_to 'New Post', new_post_path %></button>
+            <button><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></button>
+          <% else %>
+          <div class='six columns offset-by-two'>
+            <button><%= link_to 'Login', user_session_path %></button>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>

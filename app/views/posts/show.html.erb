@@ -1,14 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div class='container'>
+  <div class='row'>
+    <div class='posts-title'>
+      <h3 class= 'six columns offset-by-two'><span class='slashes'>// </span><%= @post.title %>
+      </div>
+    </div>
+  </div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
+  <div class='container'>
+    <div class='posts-content'>
+      <% if user_signed_in? %>
+      <p class= 'six columns offset-by-two textarea'><%= @post.content %>
+      <% else %>
+      <p class= 'ten columns offset-by-two'><%= @post.content %></p>
+      <% end %>
+    </div>
+    <div class='crud-btns two columns'>
+        <% if user_signed_in? %>
+        <button><%= link_to 'Edit', edit_post_path(@post) %></button>
+        <button><%= link_to 'Back', posts_path %></button>
+        <button><%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+
+        <% else %>
+
+        <% end %>
+      </div>
+    </div>
