@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'skeleton-rails'
 gem 'haml'
 gem 'devise'
+gem "paperclip"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

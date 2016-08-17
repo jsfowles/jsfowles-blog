@@ -9,6 +9,10 @@ body {
 
 }
 
+textarea {
+  white-space: pre-line !important;
+}
+
 p, ol, ul, td {
   background-color: #fff;
   color: #555 !important;
