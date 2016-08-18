@@ -11,9 +11,13 @@
   <div class='container'>
     <div class='posts-content'>
       <% if user_signed_in? %>
-      <p class= 'six columns offset-by-two textarea'><%= @post.content %>
+      <div class= 'six columns offset-by-two textarea'>
+        <%= simple_format(@post.content) %>
+      </div>
       <% else %>
-      <p class= 'ten columns offset-by-two'><%= @post.content %></p>
+      <div class= 'ten columns offset-by-two'>
+        <%= simple_format(@post.content) %></p>
+      </div>
       <% end %>
     </div>
     <div class='crud-btns two columns'>
