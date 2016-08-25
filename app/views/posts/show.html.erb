@@ -20,6 +20,9 @@
       </div>
       <% end %>
     </div>
+    <div class= 'date six columns offset-by-two'>
+      <span class='slashes'>// </span><%= @post.created_at.strftime("%B_%e_%Y") %></p>
+    </div>
     <div class='crud-btns two columns'>
         <% if user_signed_in? %>
           <button><%= link_to 'Edit', edit_post_path(@post) %></button>
