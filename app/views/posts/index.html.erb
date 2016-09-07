@@ -3,28 +3,21 @@
 <div class='container'>
   <div class='row'>
     <div class='posts-title'>
-      <h4 class= 'six columns offset-by-one'><span class='slashes'>// </span><%= link_to post.title, post%></h4>
+      <h4 class= 'six columns'><span class='slashes'>// </span><%= link_to post.title, post%></h4>
     </div>
   </div>
 </div>
 <div class='container'>
   <div class='posts-content'>
-    <% if user_signed_in? %>
-    <div class= 'ten columns offset-by-one textarea'>
-      <%= simple_format(post.content)%>
-    </div>
-    <% else %>
-    <div class= 'ten columns offset-by-one'>
-      <%= simple_format(post.content)%>
-    </div>
-    <% end %>
+    <%= simple_format(post.content)%>
   </div>
-  <div class= 'date six columns offset-by-one'>
+  <div class= 'date six columns'>
     <span class='slashes'>// </span><%= post.created_at.strftime("%B_%e_%Y") %></p>
     <% if user_signed_in? %>
     <button><%= link_to 'Edit', edit_post_path(post)%></button>
     <button><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
     <% end %>
   </div>
+</div>
 
 <% end %>
