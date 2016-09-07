@@ -4,7 +4,11 @@ button {
 }
 
 .posts-title {
-  margin-top: 120px;
+  margin-top: 0px;
+}
+
+.post-content {
+  margin-top: -150px;
 }
 
 .posts-title a {
@@ -35,4 +39,14 @@ h4 {
 
 textarea {
   white-space: pre-line !important;
+}
+
+.index-edit-btns{
+  margin-top: 15px;
+}
+
+hr {
+  border-color: #1AA0DB !important;
+  width: 75%;
+  opacity: 0.3;
 }

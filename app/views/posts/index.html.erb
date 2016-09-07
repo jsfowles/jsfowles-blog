@@ -1,23 +1,22 @@
 <p id="notice"><%= notice %></p>
   <% @posts.reverse_each do |post| %>
 <div class='container'>
-  <div class='row'>
-    <div class='posts-title'>
-      <h4 class= 'six columns'><span class='slashes'>// </span><%= link_to post.title, post%></h4>
-    </div>
+  <div class='posts-title'>
+
+    <h4><span class='slashes'>// </span><%= link_to post.title, post%></h4>
   </div>
-</div>
-<div class='container'>
   <div class='posts-content'>
     <%= simple_format(post.content)%>
   </div>
-  <div class= 'date six columns'>
-    <span class='slashes'>// </span><%= post.created_at.strftime("%B_%e_%Y") %></p>
-    <% if user_signed_in? %>
+  <div class= 'date'>
+    <span class='slashes'>// </span><%= post.created_at.strftime("%B_%e_%Y") %>
+      <% if user_signed_in? %>
+  <div class='index-edit-btns'>
     <button><%= link_to 'Edit', edit_post_path(post)%></button>
     <button><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+  </div>
     <% end %>
   </div>
+  <hr>
 </div>
-
 <% end %>
