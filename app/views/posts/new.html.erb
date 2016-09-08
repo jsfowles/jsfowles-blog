@@ -1,9 +1,14 @@
-
 <div class='container'>
-  <h4><span class='slashes'>// </span>New Post</h4>
-</div>
-<div class='container'>
+  <div class='row devise'>
+    <div class='ten columns offset-by-two'>
+      <h4><span class='slashes'>// </span>New Post</h4>
+    </div>
+  </div>
   <div class='row'>
-    <%= render 'form', post: @post %>
+    <div class='ten columns offset-by-one'>
+      <div class='posts-content'>
+        <%= render 'form', post: @post %>
+      </div>
+    </div>
   </div>
 </div>
