@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
-  <% @posts.reverse_each do |post| %>
+
 <div class='container'>
+  <% @posts.reverse_each do |post| %>
   <div class='row'>
     <div class='ten columns offset-by-one'>
       <h4><span class='slashes'>// </span><%= link_to post.title, post%></h4>
