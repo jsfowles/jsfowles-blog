@@ -19,12 +19,12 @@
     <div class='ten columns offset-by-one'>
       <div class= 'date'>
         <span class='slashes'>// </span><%= post.created_at.strftime("%B_%e_%Y") %>
-          <% if user_signed_in? %>
         <div class='index-edit-btns'>
+          <% if user_signed_in? %>
           <button><%= link_to 'Edit', edit_post_path(post)%></button>
           <button><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+          <% end %>
         </div>
-        <% end %>
       </div>
       <hr>
     </div>
