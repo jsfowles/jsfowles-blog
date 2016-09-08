@@ -15,21 +15,19 @@
   <body>
     <div class='container'>
       <div class='row'>
-          <div class=' nll-btns six columns offset-by-four'>
-            <% if user_signed_in? %>
-            <button><%= link_to 'New Post', new_post_path %></button>
-            <button><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></button>
-            <% end %>
-          </div>
-        </div>
-        <div class='row'>
-          <div class='two columns offset-by-four'>
-            <a href='jsfowles.com'>
-              <img class='logo' src='http://res.cloudinary.com/jsfowles/image/upload/v1471882903/js_logo_pwdy0z.png'>
-            </a>
-          </div>
+        <div class=' nll-btns six columns offset-by-four'>
+          <% if user_signed_in? %>
+          <button><%= link_to 'New Post', new_post_path %></button>
+          <button><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></button>
+          <% end %>
         </div>
       </div>
+      <div class='row'>
+        <div class='two columns offset-by-four'>
+          <a href='jsfowles.com'>
+            <img class='logo' src='http://res.cloudinary.com/jsfowles/image/upload/v1471882903/js_logo_pwdy0z.png'>
+          </a>
+        </div>
       </div>
     </div>
     <%= yield %>
