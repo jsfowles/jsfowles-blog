@@ -3,16 +3,12 @@
 <div class='container'>
   <div class='row'>
     <div class='ten columns offset-by-one'>
-      <div class='posts-title'>
-        <h4><span class='slashes'>// </span><%= link_to post.title, post%></h4>
-      </div>
+      <h4><span class='slashes'>// </span><%= link_to post.title, post%></h4>
     </div>
   </div>
   <div class='row'>
     <div class='ten columns offset-by-one'>
-      <div class='posts-content'>
-        <%= simple_format(post.content)%>
-      </div>
+      <%= simple_format(post.content)%>
     </div>
   </div>
   <div class='row'>
