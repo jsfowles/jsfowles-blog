@@ -9,19 +9,23 @@
       </ul>
     </div>
   <% end %>
+<div class='row'>
+  <div class='ten columns offset-by-one'>
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+    <div class="field">
+      <%= f.label :content %>
+      <%= f.text_area :content%>
+    </div>
 
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content%>
+    <div class="actions">
+      <%=f.submit%>
+      <button class='post-back-btn'><%= link_to 'Back', posts_path %></button>
+    </div>
   </div>
+</div>
 
-  <div class="actions">
-    <%=f.submit%>
-    <button class='post-back-btn'><%= link_to 'Back', posts_path %></button>
-  </div>
 <% end %>
