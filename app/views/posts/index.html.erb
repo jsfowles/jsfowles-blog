@@ -14,7 +14,7 @@
   <div class='row'>
     <div class='ten columns offset-by-one'>
       <div class= 'date'>
-        <span class='slashes'>// </span><%= post.created_at.strftime("%B_%e_%Y") %>
+        <!-- <span class='slashes'>// </span><%= post.created_at.strftime("%B_%e_%Y") %> -->
         <div class='index-edit-btns'>
           <% if user_signed_in? %>
           <button><%= link_to 'Edit', edit_post_path(post)%></button>
